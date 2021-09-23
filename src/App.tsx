@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import AddIcon from '@material-ui/icons/Add';
-import { Button } from '@material-ui/core';
+import React, { useState } from 'react'
+import logo from './logo.svg'
+import './App.css'
+import AddIcon from '@material-ui/icons/Add'
+import { Button } from '@material-ui/core'
 
 const App: React.FC = () => {
-  const [number, setNumber] = useState(0);
-  const addNumber = () => setNumber((i) => i + 1);
+  const [number, setNumber] = useState(0)
+  const addNumber = () => setNumber((i) => i + 1)
   return (
     <div className="App">
       <header className="App-header">
@@ -22,12 +22,17 @@ const App: React.FC = () => {
         >
           Learn React
         </a>
-        <Button variant="contained" color="primary" startIcon={<AddIcon />} onClick={addNumber}>
-          こんにちは {number}件
+        <Button
+          variant="contained"
+          color="primary"
+          startIcon={<AddIcon />}
+          onClick={addNumber}
+        >
+          ボタンを押した回数は{number}回です
         </Button>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
